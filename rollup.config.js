@@ -8,10 +8,8 @@ import pkg from './package.json';
 const extensions = ['.js', '.jsx', '.ts', '.tsx'];
 
 export default {
-  // Where the source input is
   input: 'index.tsx',
 
-  // create 2 builds; one for commonJS and one for ES6 modules
   output: [
     {
       file: pkg.main,
@@ -27,17 +25,13 @@ export default {
   ],
   plugins: [
 
-		// resolve only jsx? | tsx? files
 		resolve({ extensions, preferBuiltins: true }),
 
-    // run the typescript compiler with options from tsconfig.json
     typescript({
       typescript: require('typescript'),
       clean: true,
     }),
 
-    // using `.babelrc` configuration, run the files through babel while including a runtime helper
-    // and excluding anything located under node_modules (the latter won't be ran through babel)
     babel({
       extensions,
       exclude: 'node_modules/**',

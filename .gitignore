@@ -1,0 +1,12 @@
+# Webstorm
+.idea
+
+# Deployment
+dist
+
+# dependencies
+/node_modules
+
+# misc
+.DS_Store
+npm-debug.log*

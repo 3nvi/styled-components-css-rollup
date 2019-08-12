@@ -60,5 +60,5 @@ export default {
     }),
 
   ],
-	externals: ['react']
+	external: ['react']
 };

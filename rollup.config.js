@@ -60,5 +60,5 @@ export default {
     }),
 
   ],
-	external: ['react']
+	external: ['react', 'styled-components']
 };
